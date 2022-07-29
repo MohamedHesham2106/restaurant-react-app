@@ -1,38 +1,27 @@
-import { useReducer } from "react";
-const initialInputState = { value: "", isTouched: false };
-const inputStateReducer = (state, action) => {
-  if (action.type === "INPUT") {
-    return { value: action.value, isTouched: state.isTouched };
-  }
-  if (action.type === "BLUR") {
-    return { isTouched: true };
-  }
-  if (action.type === "RESET") {
-    return { value: "", isTouched: false };
-  }
-  return initialInputState;
-};
+import { useState } from "react";
 
 const useInput = (validation) => {
-  const [inputState, dispatch] = useReducer(
-    inputStateReducer,
-    initialInputState
-  );
-  const validInput = validation(inputState.value);
-  const hasError = !validInput && inputState.isTouched;
+  const [Input, setInput] = useState("");
+  const [onFocus, setOnFocus] = useState(false);
+
+  const isValid = validation(Input);
+  const hasError = !Input && onFocus;
+
   const changeHandler = (event) => {
-    dispatch({ type: "INPUT", value: event.target.value });
+    setInput(event.target.value);
   };
-  const BlurHandler = () => {
-    dispatch({ type: "BLUR" });
+  const BlurHandler = (event) => {
+    setOnFocus(true);
   };
+
   const reset = () => {
-    dispatch({ type: "RESET" });
+    setInput("");
+    setOnFocus(false);
   };
   return {
-    value: inputState.value,
+    value: Input,
     hasError,
-    isValid: validInput,
+    isValid,
     changeHandler,
     BlurHandler,
     reset,

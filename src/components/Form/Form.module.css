@@ -69,3 +69,11 @@
   border-color: #aa0b20;
   background-color: #ffeff1;
 }
+.actions .submit:disabled,
+.actions .submit:disabled:hover,
+.actions .submit:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}

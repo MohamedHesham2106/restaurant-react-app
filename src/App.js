@@ -14,8 +14,6 @@ function App() {
   const dispatch = useDispatch();
   const cartShow = useSelector((state) => state.ui.cartIsVisible);
   const showForm = useSelector((state) => state.ui.formIsVisible);
-  console.log(cartShow);
-  console.log(showForm);
   useEffect(() => {
     dispatch(fetchCartData());
   }, [dispatch]);
