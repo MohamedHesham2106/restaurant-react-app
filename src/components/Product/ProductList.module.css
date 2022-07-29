@@ -1,0 +1,29 @@
+.productlist {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  animation: products-appear 1s ease-out forwards;
+}
+@media screen and (max-width: 960px) {
+  .productlist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .productlist {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@keyframes products-appear {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
