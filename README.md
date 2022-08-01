@@ -9,13 +9,14 @@
 - [Credit](#credit)
 
 ## About The App
-[Restaurant App] is a React/Redux project for ordering meals!
+[Restaurant App] is a React/Redux project for ordering meals, cart is being sent to firebase realtime Database
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/102517583/181843416-50ddfb8f-3f6f-498e-a890-cff88fb83eca.png)
-![image](https://user-images.githubusercontent.com/102517583/181843454-4118bac2-4b0b-431f-89bd-3ac16a02bb35.png)
-![image](https://user-images.githubusercontent.com/102517583/181843485-66058a4d-17b2-44d2-bae7-c9644a47249e.png)
-![image](https://user-images.githubusercontent.com/102517583/181843518-6fdd3d3e-a2bf-4a5b-8adb-293c09583e37.png)
+![image](https://user-images.githubusercontent.com/102517583/182143132-8e2b99e8-1206-4718-af6a-ee65213dc415.png)
+![image](https://user-images.githubusercontent.com/102517583/182143163-e390791d-efe5-4e4c-a016-ca4ba3690e48.png)
+![image](https://user-images.githubusercontent.com/102517583/182143195-c07933f5-2b55-4ad9-b834-c69ced067445.png)
+![image](https://user-images.githubusercontent.com/102517583/182143230-e47d9921-23f3-48c8-86a0-7a52a1a7ed71.png)
+![image](https://user-images.githubusercontent.com/102517583/182143335-497cc859-221d-4bc6-b630-5753b090d793.png)
 
 
 
