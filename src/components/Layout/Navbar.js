@@ -37,7 +37,6 @@ const Navbar = () => {
         >
           <li onClick={scrollToSection}>about</li>
           <li onClick={scrollToSection}>menu</li>
-          <li>contact</li>
           <li onClick={ExpandNavHandler}>
             <CartButton />
           </li>
