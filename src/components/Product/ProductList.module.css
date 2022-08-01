@@ -5,15 +5,20 @@
   grid-gap: 1rem;
   animation: products-appear 1s ease-out forwards;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 990px) {
   .productlist {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
   }
 }
 @media screen and (max-width: 768px) {
   .productlist {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .productlist {
+    grid-template-columns: 1fr;
   }
 }
 @keyframes products-appear {

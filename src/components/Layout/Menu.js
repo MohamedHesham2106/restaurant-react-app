@@ -3,6 +3,7 @@ import classes from "./Menu.module.css";
 import ProductList from "../Product/ProductList";
 import { data } from "../../assets/dummy-data/data";
 import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
+import SearchError from '../Error Messages/SearchError'
 const Menu = () => {
   const [search, setSearch] = useState("");
 
@@ -12,7 +13,7 @@ const Menu = () => {
   const filteredData = data.filter((item) => {
     return item.title.toLowerCase().includes(search.toLowerCase());
   });
-  // console.log(filteredData);
+  console.log(filteredData);
   return (
     <div className={classes.menu}>
       <h1>
@@ -26,7 +27,8 @@ const Menu = () => {
           onChange={searchChangeHandler}
         />
       </div>
-      <ProductList food={filteredData} />
+      {filteredData.length !==0 && <ProductList food={filteredData} />}
+      {filteredData.length === 0 && <SearchError/> }
     </div>
   );
 };

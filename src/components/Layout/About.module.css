@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  height: 500px;
+  height: auto;
   margin-top: 50px;
   background-color: black;
   color: #fff;
@@ -11,7 +11,6 @@
 .about-img {
   background: url("../../assets/Image/pasta.png");
   background-position: center;
-
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -26,4 +25,19 @@
 }
 .about-info p {
   font-size: 1.2rem;
+}
+@media screen and (max-width: 992px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .about-info h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .about-info p {
+    font-size: 0.88rem;
+    text-align: center;
+  }
 }
